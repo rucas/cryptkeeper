@@ -1,0 +1,14 @@
+{
+  "name": "cryptkeeper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rucas/cryptkeeper.git",
+  "author": "rucas <lucas.rondenet@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "doctoc": "^1.3.0",
+    "release": "^3.0.2",
+    "semver": "^5.4.1"
+  }
+}
