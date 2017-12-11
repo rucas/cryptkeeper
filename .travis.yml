@@ -8,9 +8,17 @@ node_js:
 services:
   - docker
 
+addons:
+  apt:
+    sources:
+      - debian-sid    # Grab ShellCheck from the Debian repo
+    packages:
+      - shellcheck
+
 before_script:
   - make -B
   - docker ps -a
 
 script:
-  - yarn docs
+  - shellcheck *.sh
+  # - yarn docs
