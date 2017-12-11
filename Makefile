@@ -16,9 +16,10 @@ all: $(SEMVERS)
 	$(eval $*_version := $(shell ./node_modules/.bin/semver -i patch `head -n 1 $@`))
 	echo $($*_version) > $@
 	docker build -t $(USERNAME)/$(IMAGE):$*-latest $*/
-	docker tag $(USERNAME)/$(IMAGE):$*-latest $(USERNAME)/$(IMAGE):$*-$($*_version)
-	docker push $(USERNAME)/$(IMAGE):$*-latest
-	docker push $(USERNAME)/$(IMAGE):$*-$($*_version) 
+	# TODO: make this another step	
+	# docker tag $(USERNAME)/$(IMAGE):$*-latest $(USERNAME)/$(IMAGE):$*-$($*_version)
+	# docker push $(USERNAME)/$(IMAGE):$*-latest
+	# docker push $(USERNAME)/$(IMAGE):$*-$($*_version) 
 
 vars:
 	@echo SRCS: $(SRCS) 
