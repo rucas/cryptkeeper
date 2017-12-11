@@ -8,7 +8,9 @@ node_js:
 services:
   - docker
 
-before_install:
-  - yarn
-  - make
+before_script:
+  - make -B
   - docker ps -a
+
+script:
+  - yarn docs
