@@ -21,4 +21,9 @@ before_script:
 
 script:
   - shellcheck *.sh
-  # - yarn docs
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - yarn docs
