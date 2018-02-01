@@ -12,10 +12,10 @@ addons:
   apt:
     packages:
       - shellcheck
-      - hadolint
+        #- hadolint
 
 before_script:
-  - make -B
+  # - make -B
   - docker ps -a
 
 script:
