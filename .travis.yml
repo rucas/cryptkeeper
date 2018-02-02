@@ -29,8 +29,8 @@ script:
   - git ls-files --exclude='Dockerfile*' --ignored | xargs --max-lines=1 ${HADOLINT}
   - shellcheck *.sh
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-    - yarn docs
+    #deploy:
+    #  provider: script
+    #  skip_cleanup: true
+    #  script:
+    #    - yarn docs
