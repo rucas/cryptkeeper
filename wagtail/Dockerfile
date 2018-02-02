@@ -1,9 +1,12 @@
-FROM rucas/cryptkeeper:python-latest
-MAINTAINER rucas <lucas.rondenet@gmail.com>
+FROM python:3
+LABEL maintainer="rucas <lucas.rondenet@gmail.com>"
 
-RUN apk add --update \
-  postgresql-dev \
-  jpeg-dev \
-&& rm -rf /var/cache/apk/*
+ENV GITCRYPT_VERSION 0.6.0
+
+RUN curl -sL https://github.com/AGWA/git-crypt/archive/"$GITCRYPT_VERSION".tar.gz \
+  | tar zxv -C /var/tmp \
+  && make -C /var/tmp/git-crypt-"$GITCRYPT_VERSION" \
+  && cp /var/tmp/git-crypt-"$GITCRYPT_VERSION"/git-crypt /usr/local/bin/ \
+  && rm -rf /var/tmp/git-crypt-"$GITCRYPT_VERSION"
 
 CMD ["/bin/sh"]
