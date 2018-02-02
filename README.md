@@ -1,5 +1,4 @@
 # cryptkeeper
-A whole bunch of docker images with git-crypt in them for CI services
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
