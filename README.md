@@ -1,4 +1,6 @@
-<h1 align="center">cryptkeeper</h1> [![Greenkeeper badge](https://badges.greenkeeper.io/rucas/cryptkeeper.svg)](https://greenkeeper.io/)
+<h1 align="center">cryptkeeper</h1>
+
+[![Build Status](https://travis-ci.org/rucas/cryptkeeper.svg?branch=development)](https://travis-ci.org/rucas/cryptkeeper)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
